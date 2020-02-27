@@ -8,6 +8,9 @@ import(
 func main() {
     res,_ := lab1.Task1("4 2-3*5+")
     fmt.Println(res)
+    
+    
+    fmt.Println(buildVersion)
 }
 /*
 func Task1(inpt string){

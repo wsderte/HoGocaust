@@ -8,5 +8,9 @@ test:
 
 out/example:	ts1.go	./cmd/example/main.go
 	mkdir	-p	out
-	printf	"\nfmt.println(buildVersion)"	>>	./cmd/example/pattern.go
+	echo	"package	main"	>	./cmd/example/file.go
+	printf	"\nconst	buildVersion="	>>	./cmd/example/file.go
+	printf	'"'	>>	./cmd/example/file.go
+	git describe	|	tee	-a ./cmd/example/file.go
+	printf	'"'	>>	./cmd/example/file.go
 	go	build	-o	out/example	./cmd/example
