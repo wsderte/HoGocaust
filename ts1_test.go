@@ -7,7 +7,7 @@ import (
 )
 
 func TestTask1(t *testing.T) {
-	res, err := Task1("42 21 - 322 * 56 +")
+	res, err := Task1("42 21 - 3 * 56 +")
 	if assert.Nil(t, err) {
 		assert.Equal(t,"+56 * 322 - 42 21", res)
 	}
